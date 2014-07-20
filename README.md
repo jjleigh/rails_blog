@@ -1,4 +1,4 @@
-rails_blog
+RAILS BLOG
 ==========
 
 DESCRIPTION :
