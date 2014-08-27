@@ -1,27 +1,16 @@
-<h1>New Article</h1>
+  <div class="row">
+    <div class="large-7 large-centered columns">
+      <div class="form-containers">
 
-<%= form_for :article, url: articles_path do |f| %>
-	<% if @article.errors.any? %>
-	<div id= "error_explanation">
-		<h2><%= pluralize (@article.errors.count, "error") %> prohibited this artilce from being saved:</h2>
-		<ul>
-			<% @article.errors.full_messages.each do |msg| %>
-			<li><%= msg %></li>
-		<% end %>
-		</ul>
-	</div>
-<% end %>
-	<p>
-		<%= f.label :title %><br>
-		<%= f.text_field :title %>
-	</p>
-	<p>
-		<%= f.label :text %><br>
-		<%= f.text_area :text %>
-	</p>
-	<p>
-		<%= f.submit :title %>
-	</p>
-	<% end %>
+    	<div class="form-header-container">
+        <div class="large-12 columns  form-header">
+          <h1 class="text-center">New Article</h1>
+        </div>
+      </div>
 
-<%= link_to 'Back', articles_path %>
+        <%= render 'form' %>
+
+      </div>
+    </div>
+
+  </div>
