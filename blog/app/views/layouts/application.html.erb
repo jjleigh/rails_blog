@@ -6,7 +6,61 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body> <div class="sticky">
+
+ 
+          <nav class="top-bar" data-topbar>
+            <ul class="title-area">
+               
+              <li class="name">
+                <div class="logo-container">
+                  <h1 id="app-logo"><%= link_to "Photogur", root_path %></h1>
+                </div>
+              </li>
+              <li class="toggle-topbar icon"><a href="#"><span>menu</span></a></li>
+            </ul>
+         
+          <section class="top-bar-section right-navigation-container">
+            <ul class="right">
+              <li class="has-form">
+                <%= form_tag (pictures_path), action: "search", method: "get" do %>
+                  <div class="row collapse">
+                    <div class="large-8 small-9 columns">
+                      <%= text_field_tag :search, params[:search], :placeholder => 'Find pictures' %>
+                  
+                    </div>  
+                    <div class="large-4 small-3 columns">
+                      <%= submit_tag "search", :name => nil, :class => 'button ' %>
+                    </div>
+                  </div>
+                <% end %>
+                  
+                 
+        
+              <% if current_user %>
+                <li><%= link_to 'Profile', user_path(current_user), :class => "links"%></li>
+                <li><%= link_to 'Log out', log_out_path , :class => "links"%></li>
+
+              <% else %>
+                <li><%= link_to 'Categories', categories_path, :class => "links"%></li>
+                <li><%= link_to "Login", new_session_path, :class => "links"%></li>
+
+                <li><%= link_to "Sign up", new_user_path, :class => "links"%></li>
+
+              <% end %>
+          </li>
+
+        </ul>
+      </section>
+    </nav>
+  </div>
+
+  <div class="row">
+    <div class="large-8 large-centered columns">
+      
+       <%= render 'layouts/messages' %>
+    </div>
+  </div>  
 
 <%= yield %>
 
