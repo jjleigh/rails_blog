@@ -17,6 +17,7 @@ class CommentsController < ApplicationController
 				format.html {render 'articles/show', alert: "There was an error."}
         format.js {}
       end
+    end
 	end
 
 	def show

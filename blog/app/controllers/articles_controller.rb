@@ -1,4 +1,5 @@
 class ArticlesController < ApplicationController
+	before_filter :ensure_logged_in, :except => [:show, :index]
 	def new 
 		@article = Article.new
 	end 

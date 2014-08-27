@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_filter :ensure_logged_in
   def new
     @user = User.new
   end
@@ -10,6 +11,7 @@ class UsersController < ApplicationController
       redirect_to articles_url, :notice => "Thanks for Signing up!"
     else
       render :new
+    end
   end
 
   def edit
