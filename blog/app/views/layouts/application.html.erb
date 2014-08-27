@@ -14,7 +14,7 @@
                
               <li class="name">
                 <div class="logo-container">
-                  <h1 id="app-logo"><%= link_to "Photogur", root_path %></h1>
+                  <h1 id="app-logo"><%= link_to "Jitter", root_path %></h1>
                 </div>
               </li>
               <li class="toggle-topbar icon"><a href="#"><span>menu</span></a></li>
@@ -23,7 +23,7 @@
           <section class="top-bar-section right-navigation-container">
             <ul class="right">
               <li class="has-form">
-                <%= form_tag (pictures_path), action: "search", method: "get" do %>
+                <%= form_tag (articles_path), action: "search", method: "get" do %>
                   <div class="row collapse">
                     <div class="large-8 small-9 columns">
                       <%= text_field_tag :search, params[:search], :placeholder => 'Find pictures' %>
