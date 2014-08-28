@@ -118,13 +118,13 @@
 									    </div>
 
 										<% else %>
-										<div class="row">
-											<div class="small-10 small-centered columns login-comment-prompt">
-												<div id="login-prompt-container">
-											  	<p class="text-center">Please <%= link_to "log in", new_session_path %> to add a review.</p> 
+											<div class="row">
+												<div class="small-10 small-centered columns login-comment-prompt">
+													<!-- <div id="login-prompt-container"> -->
+												  	<p class="text-center">Please <%= link_to "log in", new_session_path %> to add a review.</p> 
+													<!-- </div> -->
 												</div>
 											</div>
-										</div>
 										<% end %>
 
 
@@ -136,4 +136,4 @@
 
     </div><!-- /#wrapper -->
 
-<%#= javascript_include_tag "Javascript/articles.js" %>
+<script type="text/javascript" src="Javascript/articles.js"></script>
