@@ -1,31 +1,37 @@
+<div class="bg-img">
 
-<div class="row">
-  <div class="large-7 large-centered columns">
-    <div class="form-containers">
+</div>
+  <div class="content">
+    
+    
+    <div class="row">
+      <div class="large-7 large-centered columns">
+        <div class="form-containers">
 
-    <div class="form-header-container">
-      <div class= "large-12 columns form-header">
-        <h1 class="text-center">Log in</h1>
-      </div>
-    </div>
+        <div class="form-header-container">
+          <div class= "large-12 columns form-header">
+            <h1 class="text-center">Log in</h1>
+          </div>
+        </div>
 
-      <div class="large-6 medium-centered columns">
-        <div class="site-forms">
-          <%= form_tag sessions_path do %>
-            <div class="field">
-              <%= label_tag :email %><br/>
-              <%= text_field_tag :email, params[:email] %>
+          <div class="large-6 medium-centered columns">
+            <div class="site-forms">
+              <%= form_tag sessions_path do %>
+                <div class="field">
+                  <%= label_tag :email, :class => "field-label" %><br/>
+                  <%= text_field_tag :email, params[:email], :class => "field-input", :placeholder =>"Email" %>
+                </div>
+                <div class="field">
+                  <%= label_tag :password, :class => "field-label" %><br/>
+                  <%= password_field_tag :password, :class => "field-input", :placeholder =>"Password" %>
+                </div>
+                <div class="actions">
+                  <%= submit_tag "Log in", :class => 'button' %>
+                </div>
+              <% end %>
             </div>
-            <div class="field">
-              <%= label_tag :password %><br/>
-              <%= password_field_tag :password %>
-            </div>
-            <div class="actions">
-              <%= submit_tag "Log in", :class => 'button' %>
-            </div>
-          <% end %>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
