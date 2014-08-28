@@ -1,16 +1,50 @@
-  <div class="row">
-    <div class="large-7 large-centered columns">
-      <div class="new-article-form">
+<div id="wrapper">
+  <div id="main">
+    <div class="container">
+      <div class="buttons">
+          <button class="nav-toggler toggle-slide-left"><i class="fa fa-bars"></i></button>
+      </div><!-- /buttons -->
 
-  <!--   	<div class="form-header-container">
-        <div class="large-12 columns  form-header">
-          <h1 class="text-center">New Article</h1>
+      <section class="content">    
+
+        <div class="row">
+          <div class="large-7 large-centered columns">
+            <div class="new-article-form">
+
+        <!--   	<div class="form-header-container">
+              <div class="large-12 columns  form-header">
+                <h1 class="text-center">New Article</h1>
+              </div>
+            </div> -->
+
+              <%= render 'form' %>
+
+            </div>
+          </div>
+
         </div>
-      </div> -->
-
-        <%= render 'form' %>
-
-      </div>
+      </section><!-- /.content -->
     </div>
+  </div><!-- #main -->
 
-  </div>
+</div><!-- /#wrapper -->
+
+<nav class="menu slide-menu-left">
+        <ul>
+            <li><button class="close-menu cmn-t-bg"><i class="fa fa-times"></i></button></li>
+            <li id="logo"><%= link_to "Jitter", root_path %></li>
+            <li><%= link_to "Log in", new_session_path %></li>
+            <li><%= link_to "Sign up", new_user_path %></li>
+            <li><a href="#">Help</a></li>
+          <% if current_user%>
+            <li><%= link_to "New Story", new_article_path %></li>
+            <li><%= link_to "Your Blog", user_path(current_user) %></li>
+            <li><a href="#">Settings</a></li>
+            <li><a href="#">Help</a></li>
+            <li><%= link_to 'Log out', log_out_path%></li>
+          <% end %>
+        </ul>
+    </nav><!-- /slide menu left -->
+
+<script type="text/javascript" src="Javascript/articles.js"></script>
+

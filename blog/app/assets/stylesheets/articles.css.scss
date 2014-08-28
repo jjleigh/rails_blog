@@ -154,7 +154,9 @@ body {
     transition: all 0.3s;
 }
 section {
-    margin-bottom: 30px
+    /*position: absolute;*/
+    margin-bottom: 30px;
+    z-index: 9999;
 }
 
 /*section.toggle {
@@ -242,6 +244,9 @@ nav.slide-menu-left li:first-child {
 }
 nav.slide-menu-left #logo {
    font-family: Merriweather;
+    font-size: 38px !important;
+
+
 }
 
 nav.slide-menu-left li:last-child {
@@ -252,6 +257,11 @@ nav.slide-menu-left a {
     padding: 10px;
     font-size: 18px;
 }
+ nav.slide-menu-left a:nth-child(2) {
+    font-size: 28px;
+ }
+
+
 nav.slide-menu-left button.close-menu {
     margin: 10px 0;
     padding: 10px 30px;
@@ -269,5 +279,5 @@ body.sml-open nav.slide-menu-left {
 /*handles the new article form*/
 
 .new-article-form {
-    
+    margin-top: 140px;
 }
