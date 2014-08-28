@@ -15,8 +15,8 @@
 	z-index: 9;
 	left: 40%;
 	position: relative;
-	z-index:600;
-	top: -65px;
+	z-index:700;
+	top: -60px;
 }
 .app-logo h1 {
 	
@@ -25,7 +25,40 @@
 	text-align: center;
 	padding-top: 20px;
 
+
 }
+
+.list {
+	list-style: none;
+	font-size: 17px;
+	left:27%;
+	position:relative;
+
+}
+
+.nav-links {
+
+	display: inline-block;
+	font-family: Muli, Josefin Sans;
+	padding-right: 30px;
+	padding-left: 30px;
+	transition: all .5s;
+	
+}
+
+.nav-links:hover a {
+	margin-bottom: 12px;
+}
+
+
+.nav-links:last-child {
+	border-right: none;
+}
+
+a {
+	text-decoration: none;
+}
+
 
 /*handles the articles on the index page*/
 
