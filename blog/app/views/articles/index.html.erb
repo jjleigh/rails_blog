@@ -19,21 +19,30 @@
 </div>
 
 	<div class="row">
-		<div class=" large-8 small-6 small-centered columns">
+		<div class=" large-4 small-6 small-centered columns">
 			<ul class="list">
-				<li class="nav-links"><%= link_to "Profile" %></li>
-				<li class="nav-links"><%= link_to "Profile" %></li>
-				<li class="nav-links"><%= link_to "Profile" %></li>
-				<li class="nav-links"><%= link_to "Profile" %></li>
-				<li class="nav-links"><%= link_to "Profile" %></li>
+					<li class="nav-links"><%= link_to "Articles" %></li>
+				<% if current_user %>
+					<li class="nav-links"><%= link_to "Profile" %></li>
+					<li class="nav-links"><%= link_to "Profile" %></li>
+				<% else %>
+					<li class="nav-links"><%= link_to "Login" %></li>
+					<li class="nav-links"><%= link_to "Sign up" %></li>
+				<% end %>
 			</ul>
 		</div>
 	</div>
 
+	<div class="row">
+    <div class="small-12 columns">
+    	<hr>
+    </div>
+  </div>
+
 
     <div class="row">
     	<div class="large-12 small-centered columns index-header">
-    		<hr>
+    		
 				<h1 class="text-center index-head">Popular articles</h1>
     	</div>
     </div>

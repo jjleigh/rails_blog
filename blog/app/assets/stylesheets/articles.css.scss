@@ -40,8 +40,8 @@
 
 	display: inline-block;
 	font-family: Muli, Josefin Sans;
-	padding-right: 30px;
-	padding-left: 30px;
+	padding-right: 18px;
+	padding-left: 18px;
 	transition: all .5s;
 	
 }
@@ -63,12 +63,16 @@ a {
 /*handles the articles on the index page*/
 
 .index-articles {
-	/*overflow: hidden;*/
 		width: 100%;
     background:white;
     top: 400px;
     z-index:600;
     position:relative;
+}
+
+.index-header {
+	margin-bottom: 120px;
+	margin-top: 80px;
 }
 
 
