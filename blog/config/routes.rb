@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root :to => "articles#index"
   resources :users, :except => [:index] do
-    resources :articles
+    resources :articles, :only => [:show]
   end
   
 
