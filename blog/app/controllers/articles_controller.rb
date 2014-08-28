@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-	before_filter :ensure_logged_in, :except => [:show, :index]
+	before_filter :ensure_logged_in, :except => [:show, :index, :new, :create]
 
 	def index
 		@articles = Article.all
@@ -20,6 +20,8 @@ class ArticlesController < ApplicationController
 
 	def show
 		@article = Article.find(params[:id])
+
+		@comments = @article.comments.build
 	end
 
 	def index

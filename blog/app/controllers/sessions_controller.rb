@@ -17,7 +17,7 @@ class SessionsController < ApplicationController
 	end
 
 	def destroy
-		sessio[:user_id] = nil
+		session[:user_id] = nil
 
 		redirect_to articles_url
 	end
