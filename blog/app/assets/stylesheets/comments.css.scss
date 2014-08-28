@@ -1,8 +1,51 @@
-.login-comment-prompt {
-	/*margin-top: 100px;*/
-	margin-bottom: 100px;
+.comments-panel {
+	margin-top: 200px;
+	width: 58%;
 	background-color: silver;
-	height: 60px;
-	color: black;
-
+	margin-top: 80px;
+	margin-bottom: 200px;
 }
+
+
+.comments-header {
+	padding-top: 30px;
+	 	padding-bottom: 30px;
+		background-color: gray;
+
+	h3 {
+		font-family: Merriweather;
+	}
+	
+}
+
+
+	.new-comment-header {
+		padding-bottom: 30px;
+		padding-top: 30px;
+		padding-left: 70px;
+		background-color: silver;
+	}
+
+	.new-comment-input {
+		padding-left: 70px;
+		padding-bottom: 30px;
+	}
+
+
+
+	.comment-info {
+		padding-top: 50px ;
+		padding-left: 70px ;
+		background-color: white;
+
+		#commenter {
+				color: #2B5BFF;
+		}
+	
+	}
+	
+	.comment-text {
+		padding-top: 10px ;
+		padding-left: 70px ;
+		background-color: white;
+	}

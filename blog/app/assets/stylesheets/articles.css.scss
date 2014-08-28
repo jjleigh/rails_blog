@@ -223,7 +223,7 @@ button.close-menu:focus {
 
 nav.slide-menu-left {
     top: 0;
-    width: 270px;
+    width: 215px;
     height: 100%;
 }
 nav.slide-menu-left li {
@@ -237,7 +237,8 @@ nav.slide-menu-left li {
     font-family: Muli;
 }
 nav.slide-menu-left li:first-child {
-    border-top: none
+    border-top: none;
+    /*background-color: black;*/
 }
 nav.slide-menu-left #logo {
    font-family: Merriweather;
@@ -254,7 +255,8 @@ nav.slide-menu-left a {
 nav.slide-menu-left button.close-menu {
     margin: 10px 0;
     padding: 10px 30px;
-    background-color: #3184a1;
+    font-size: 30px;
+    background-color: black;
     color: #fff;
 }
 nav.slide-menu-left {
@@ -262,4 +264,10 @@ nav.slide-menu-left {
 }
 body.sml-open nav.slide-menu-left {
     left: 0
+}
+
+/*handles the new article form*/
+
+.new-article-form {
+    
 }
