@@ -39,7 +39,7 @@
 .nav-links {
 
 	display: inline-block;
-	font-family: Muli, Josefin Sans;
+	font-family: Muli;
 	padding-right: 18px;
 	padding-left: 18px;
 	transition: all .5s;
@@ -72,7 +72,46 @@ a {
 
 .index-header {
 	margin-bottom: 120px;
-	margin-top: 80px;
+	margin-top: 85px;
+}
+/*applies to the double lines*/
+
+	.trial {
+		overflow: hidden;
+		text-align: center;
+	}
+
+	.trial span:before,
+	.trial span:after {
+/*		border-bottom: 1px solid black;
+		border-top: 1px solid black; this allows the double line effect */
+		border: 1px dashed black;
+    content: "";
+    display: inline-block;
+    /*height: 10px;  this allows the double line effect*/
+    position: relative;
+    vertical-align: middle;
+    width: 50%;
+	}
+	.trial span:before {
+    right: 0.5em;
+    margin-left: -50%;
+	}
+	.trial span:after {
+    left: 0.5em;
+    margin-right: -50%;
+	}
+	
+
+
+
+/*handles the article show page*/
+
+
+.entire-article {
+	margin-top: 200px;
 }
 
-
+.article_header {
+	padding-bottom: 50px;
+}
