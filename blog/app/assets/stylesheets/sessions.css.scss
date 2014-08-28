@@ -44,13 +44,12 @@
 .form-header-container h1 {
     padding-bottom: 20px;
 }
-/*http://i.kinja-img.com/gawker-media/image/upload/s--iREYj_am--/181ibyv29l8bijpg.jpg*/
+
 
 
 /*Handles the styling of the input fields*/
 
-	.form-containers input[type=text],
-	.form-containers input[type=password] {
+	.form-containers input{
     /* Size and position */
     width: 100%;
     padding: 8px 4px 8px 10px;
@@ -97,14 +96,11 @@
 /*focus and hover styles*/
 
 
-.form-containers input[type=text]:hover,
-.form-containers input[type=password]:hover {
+.form-containers input:hover {
     border-color: white;
 }
  
-.form-containers input[type=text]:focus,
-.form-containers input[type=password]:focus,
-.form-containers input[type=submit]:focus {
+.form-containers input:focus {
     box-shadow: 
         0 1px 0 rgba(255,255,255,0.2), 
         inset 0 1px 1px rgba(0,0,0,0.1),
@@ -114,8 +110,7 @@
 }
  
 /* Fallback */
-.no-boxshadow .form-containers input[type=text]:focus,
-.no-boxshadow .form-containers input[type=password]:focus {
+.no-boxshadow .form-containers input:focus {
     outline: 1px solid white;
 }
 

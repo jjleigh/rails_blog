@@ -1,4 +1,4 @@
-<div class="large-6 medium-centered columns ">
+<div class="large-8 medium-centered columns ">
 		<div class="site forms">
 			
 			<%= form_for @user do |f|%>
@@ -14,32 +14,32 @@
 			    </div>
 			  <% end %>
 				<div class="field">
-					<%= f.label :name %><br>
-					<%= f.text_field :name %>
+					<%= f.label :name, :class => "field-label" %><br>
+					<%= f.text_field :name, :class => "field-input", :placeholder =>"E.g. John Smith" %>
 				</div>
 
 				<div class="field">
-					<%= f.label :email %><br>
-					<%= f.text_field :email %>
+					<%= f.label :email, :class => "field-label" %><br>
+					<%= f.text_field :email, :class => "field-input", :placeholder =>"example@example.com" %>
 				</div>
 
 				<div class="field">
-					<%= f.label :description %><br>
-					<%= f.text_field :description %>
+					<%= f.label :description, :class => "field-label" %><br>
+					<%= f.text_area :description, :class => "field-input", :placeholder =>"Tell us about you" %>
 				</div>
 
 				<div class="field">
-					<%= f.label :picture %><br>
-					<%= f.text_field :url %>
+					<%= f.label :picture, :class => "field-label" %><br>
+					<%= f.text_field :url, :class => "field-input" %>
 				</div>
 
 				<div class="field">
-					<%= f.label :password %><br>
-					<%= f.password_field :password %>
+					<%= f.label :password, :class => "field-label" %><br>
+					<%= f.password_field :password, :class => "field-input" %>
 				</div>
 				<div class="field">
-    			<%= f.label :password_confirmation %><br/>
-    			<%= f.password_field :password_confirmation %>
+    			<%= f.label :password_confirmation, :class => "field-label" %><br/>
+    			<%= f.password_field :password_confirmation, :class => "field-input" %>
   			</div>
 				<div class="field">
 					<%= f.submit "save", :class => 'button' %>
