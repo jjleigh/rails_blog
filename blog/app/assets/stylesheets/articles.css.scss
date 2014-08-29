@@ -391,8 +391,29 @@ body.sml-open nav.slide-menu-left {
     background-color: transparent;
 }
 
+/*style articles on the index page*/
+.index-article-container {
+   margin-top: 80px;
+    margin-bottom: 150px; 
+}
 
+.index-article-text {
+    max-height: 300px;
+    overflow: hidden;
+    margin-top: 15px;
+    font-family: Muli;
+    color: gray;
+}
 
+.index-article-title > a {
+    color: black;
+    font-family: Merriweather;
+    font-size: 35px;
+}
+
+.index-article-title > a:hover {
+    color: gray;
+}
 
 
 
