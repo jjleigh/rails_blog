@@ -27,6 +27,31 @@
   margin-right: 20px;
 }
 
+.app-logo-container-form {
+    background-color: black;
+    color: white;
+    width:250px;
+    height: 100px;
+    z-index: 9;
+    /*left: 40%;*/
+    position: relative;
+    z-index:700;
+    top: 70px;
+}
+.app-logo-form h1 {
+    
+    font-family: Merriweather;
+    color: white;
+    text-align: center;
+    padding-top: 20px;
+
+    a {
+       color: white; 
+    }
+
+
+}
+
 .form-containers {
 	 /*width: 300px;*/
 	 /*left: 300px;*/
