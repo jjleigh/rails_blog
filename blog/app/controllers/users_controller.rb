@@ -8,7 +8,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
 
     if @user.save
-      redirect_to articles_url, :notice => "Thanks for Signing up!"
+      redirect_to new_session_path, :notice => "Thanks for Signing up!"
     else
       render :new
     end

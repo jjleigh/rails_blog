@@ -22,13 +22,14 @@
           <div class="large-6 medium-centered columns">
             <div class="site-forms">
               <%= form_tag sessions_path do %>
+
                 <div class="field">
                   <%= label_tag :email %><br/>
                   <%= text_field_tag :email, params[:email], :class => "field-input", :placeholder =>"Email" %>
                 </div>
                 <div class="field">
                   <%= label_tag :password %><br/>
-                  <%= password_field_tag :password, :class => "field-input",:placeholder =>"Password" %>
+                  <%= password_field_tag :password %>
                 </div>
                 <div class="actions">
                   <%= submit_tag "Log in", :class => 'button' %>
