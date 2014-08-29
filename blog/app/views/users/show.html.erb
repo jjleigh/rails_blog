@@ -36,7 +36,7 @@
           <% @my_articles.each do |article| %>
               <div class="row">
                 <div class="large-10 medium-5 small-4 small-centered columns">
-                  <h3 class="article-head"><%= link_to article.title, article_path(article) %></h3>
+                  <h3 class="user-article-title"><%= link_to article.title, article_path(article) %></h3>
                 </div>
               </div>
               <div class="row">
@@ -53,6 +53,7 @@
               </div>
                 <!-- <p><%#= link_to 'Edit', edit_article_path(article) %></p> -->
           <% end %>
+          <hr>
         </div>
       </div>           
     </section><!-- /.content -->

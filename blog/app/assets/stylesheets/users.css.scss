@@ -42,6 +42,15 @@ outline-offset: -12px;
 	font-family: Muli;
 }
 
+.user-article-title > a {
+	color: black;
+	font-family: Merriweather;
+}
+
+.user-article-title > a:hover {
+	color: gray;
+}
+
 /*styling for contine reading button*/
 	.contine-reading-button {
 		margin-top: 15px;
