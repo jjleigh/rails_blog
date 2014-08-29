@@ -1,6 +1,7 @@
 class CommentsController < ApplicationController
-	before_filter :ensure_logged_in, :only [:create, :new, :destroy]
+	before_filter :ensure_logged_in, :only => [:create, :new, :destroy]
 	before_filter :load_article
+
 	def new
 		@comment = Comment.new
 	end
@@ -10,7 +11,7 @@ class CommentsController < ApplicationController
 		@comment.user_id = current_user.id
 
 		respond_to do |format|
-			if @coment.save
+			if @comment.save
 				format.html {redirect_to article_path(@article.id)}
 				format.js {}
 			else
@@ -34,7 +35,7 @@ class CommentsController < ApplicationController
 
 	private 
 	def comment_params
-		params.require(:comment).permit(:text, :title)
+		params.require(:comment).permit(:description)
 	end
 
 	def load_article
