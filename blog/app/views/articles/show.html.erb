@@ -16,7 +16,7 @@
 								<p>Written by: <%= link_to @article.user.name, user_path(@article.user) %></p>
 								<p><%= @article.created_at %></p>
 								<% if current_user.id == @article.user.id %>
-									<%= link_to "", @article , :method => :delete, :class =>"fa fa-trash-o", data: {confirm: "Are you sure you want to delete this article?"} %>
+									<%= link_to "", @article , :method => :delete, :class =>"fa fa-trash-o", data: {confirm: "Are you sure you want to delete your article?"} %>
 								<% else %>
 									<p></p>
 								<% end %>
