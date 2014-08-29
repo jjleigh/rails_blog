@@ -44,23 +44,24 @@
     </div>
 
   
-        <div class="row">
-          <% @articles.each do |article| %>
-        
-            <div class="large-12 small-12 medium-12 columns">
-              <div class="row">
-              	<div class="large-9 medium-8 small-7 columns">
-              		<h3 class="article-head"><%= link_to article.title, article_path(article) %></h3>
-              	</div>
-              </div>
-              <div class="row">
-              	<div class="large-9 medium-8 small-7 columns">
-              		<p class="article-text"><%= article.text %></p>
-              	</div>
-              </div>
+        <div class="row article-container">
+          <div class="small-12 columns">
+	          <% @articles.each do |article| %>
+        			<div class="small-12 small-centered columns">
+	              <div class="row">
+	              	<div class="large-8 medium-8 small-8 small-centered columns">
+	              		<h3 class=" article-head text-center"><%= link_to article.title, article_path(article) %></h3>
+	              	</div>
+	              </div>
+	              <div class="row">
+	              	<div class="large-6 medium-6 small-6 small-centered columns">
+	              		<p class="article-text"><%= article.text %></p>
+	              	</div>
+	              </div>
+	            </div>
 								<!-- <p><%#= link_to 'Edit', edit_article_path(article) %></p> -->
-            </div>
-          <% end %>
+	          <% end %>
+          </div>
         </div>
 </div>
 	</div>
