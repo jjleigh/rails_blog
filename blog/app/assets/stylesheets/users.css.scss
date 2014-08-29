@@ -1,3 +1,27 @@
+/*handles the styles for the edit page*/
+
+.edit-bg-img {
+	background-image: url('http://wallpaperstock.net/winter-bokeh_wallpapers_35215_2560x1440.jpg');
+ background-repeat: no-repeat;
+
+
+
+ height: 100%;
+	width: 100%;
+ position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  display: block;
+
+  -webkit-filter: blur(3px);
+  -moz-filter: blur(3px);
+  -o-filter: blur(3px);
+  -ms-filter: blur(3px);
+  filter: blur(3px);
+}
+
+
 /*Handles styling for user show page*/
 
 .user-header {
