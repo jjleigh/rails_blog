@@ -5,7 +5,7 @@
 }
 
 .user-image {
-	/*border-radius: 10;*/
+	/*border-radius: 100%;*/
 	/*height: 140px;
 	width: 170px;*/
  /*border: 1px double #000;*/
@@ -24,4 +24,35 @@ outline-offset: -12px;
 	font-family: Muli;
 	font-size: 16px;
 	font-weight: 300;
+}
+
+
+/*styling for user articles*/
+
+.user-article-container {
+	margin-top: 50px;
+	margin-bottom: 150px;
+}
+
+
+.user-article-text {
+	max-height: 300px;
+	overflow: hidden;
+	margin-top: 15px;
+	font-family: Muli;
+}
+
+/*styling for contine reading button*/
+	.contine-reading-button {
+		margin-top: 15px;
+    background-color: black;
+    font-family: Muli;
+    border-radius: 10px;
+}
+
+.contine-reading-button:hover {
+    border: 2px solid black;
+    background-color: white;
+    color: black;
+
 }
