@@ -11,18 +11,18 @@
         <div class="small-12 coulmns">
           
           <div class="row user-image-container">
-            <div class="small-2 small-centered columns">
+            <div class="large-2 medium-2 small-4 small-centered columns">
               <%= image_tag @user.url, :class => 'user-image' %>
             </div>
           </div>
 
           <div class="row user-name-container">
-            <div class="small-5 small-centered columns"> 
+            <div class="large-5 medium-5 small-12 small-centered columns"> 
               <h1 class="text-center user-name"><%= @user.name %></h1>
             </div> 
           </div>
           <div class="row user-description-container">
-            <div class="small-5 small-centered columns"> 
+            <div class=" large-5 medium-5 small-7 small-centered columns"> 
               <h1 class="text-center user-description"><%= @user.description %></h1>
             </div> 
           </div>
@@ -35,15 +35,15 @@
         <div class="large-10 medium-10 small-12 small-centered columns">
           <% @my_articles.each do |article| %>
               <div class="row">
-                <div class="large-10 medium-5 small-4 small-centered columns">
+                <div class="large-10 medium-5 small-7 small-centered columns">
                   <h3 class="user-article-title"><%= link_to article.title, article_path(article) %></h3>
                 </div>
               </div>
               <div class="row">
-                <div class="large-10 medium-8 small-7 small-centered columns">
+                <div class="large-10 medium-8 small-12 small-centered columns">
                   <p class="user-article-text"><%= article.text %></p>
                 <div class="row">
-                  <div class="small-4 columns">
+                  <div class="large-5 medium-4 small-7 small-centered medium-uncentered large-uncentered columns">
                     
                     <p class="contine-reading"><%= link_to "Contine reading", article_path(article), :class => "button [tiny small large] contine-reading-button" %></p>
                   </div>
