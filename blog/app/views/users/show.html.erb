@@ -7,12 +7,26 @@
 
       <section class="content"> 
 
-      <div class="row">
-        <div class="small-8 small-centered columns">
-          <img src="http://placekitten.com/g/400/500" class="user-image">
-        </div>
-        <div class> 
-          <h1 class="text-center"><%= @user.name %></h1>
+      <div class="row user-header">
+        <div class="small-12 coulmns">
+          
+          <div class="row user-image">
+            <div class="small-2 small-centered columns">
+              <img src="http://placekitten.com.s3.amazonaws.com/homepage-samples/200/286.jpg">
+            </div>
+          </div>
+
+          <div class="row user-name-container">
+            <div class="small-5 small-centered columns"> 
+              <h1 class="text-center user-name"><%= @user.name %></h1>
+            </div> 
+          </div>
+          <div class="row user-description-container">
+            <div class="small-5 small-centered columns"> 
+              <h1 class="text-center user-description"><%= @user.description %></h1>
+            </div> 
+          </div>
+
         </div>
       </div>
 
