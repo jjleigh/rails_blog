@@ -10,9 +10,9 @@
       <div class="row user-header">
         <div class="small-12 coulmns">
           
-          <div class="row user-image">
+          <div class="row user-image-container">
             <div class="small-2 small-centered columns">
-              <img src="http://placekitten.com.s3.amazonaws.com/homepage-samples/200/286.jpg">
+              <%= image_tag @user.url, :class => 'user-image' %>
             </div>
           </div>
 
@@ -29,6 +29,7 @@
 
         </div>
       </div>
+        <hr>
 
       <% @my_articles.each do |article| %>
         <div class="row">
