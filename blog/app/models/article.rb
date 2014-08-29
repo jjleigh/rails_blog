@@ -1,6 +1,6 @@
 class Article < ActiveRecord::Base
-	scope :newest_first, -> { order("created_at DESC")}
-	
+	default_scope { order('created_at DESC')}
+
 	belongs_to :user
 	has_many :comments 
 	has_many :users, :through => :comments
