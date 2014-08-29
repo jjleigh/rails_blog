@@ -107,14 +107,16 @@
 					        			</ul>
 				      				</div>
 				    				<% end %>
-
+									<div class="comment-form-container">
+										
 							    	<div class="field">
-						      		<%= f.label :comment %><br />
+						      		<%= f.label :comment, :id => 'comment-label' %><br />
 						      		<%= f.text_area :description, :class=> "new-input" %>
 						    		</div>
 						    		<div class="actions">
 						      		<%= f.submit 'post', :class => 'button [tiny small large] save-button' %>
 						    		</div>
+									</div>
 				  				<% end %>
 				  			</div>
 			    		</div>
