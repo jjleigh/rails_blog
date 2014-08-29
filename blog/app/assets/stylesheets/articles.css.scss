@@ -257,9 +257,6 @@ nav.slide-menu-left a {
     padding: 10px;
     font-size: 18px;
 }
- nav.slide-menu-left a:nth-child(2) {
-    font-size: 28px;
- }
 
 
 nav.slide-menu-left button.close-menu {
@@ -281,3 +278,67 @@ body.sml-open nav.slide-menu-left {
 .new-article-form {
     margin-top: 140px;
 }
+
+
+.save-button {
+    background-color: black;
+    font-family: Muli;
+}
+
+/*styling for place holders*/
+
+::-webkit-input-placeholder {
+   color: #210B02;
+   font-family: Muli;
+   font-size: 20px;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #210B02;
+   font-family: Muli;
+   font-size: 20px;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #210B02;
+   font-family: Muli;
+   font-size: 20px;  
+}
+
+:-ms-input-placeholder {  
+   color: #210B02; 
+   font-family: Muli; 
+   font-size: 20px;
+}
+
+/*Styling for labels*/
+
+.article-site-forms label {
+    display: none; /* this hides the labels */
+    padding: 0 0 5px 2px;
+    cursor: pointer;
+}
+ 
+.article-site-forms label:hover ~ input {
+    border-color: #333;
+}
+ 
+.no-placeholder .article-site-forms label {
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
