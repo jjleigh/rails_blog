@@ -53,8 +53,10 @@
 										
 														<p id='commenter'>
 															<strong><%= comment.user.name %></strong><em><%= comment.created_at %></em> 
-															<% if current_user.id == comment.user.id %>
+															<% if current_user.id == comment.user.id || current_user.id == @article.user.id %>
 																<p><%= link_to "", [comment.article, comment], :method => :delete, :class =>"fa fa-trash-o" %></p>
+															<% else %>
+																<p></p>
 															<% end %>
 														</p>
 														
