@@ -14,12 +14,15 @@
 							<div class="small-12 medium-9 large-8 small-centered columns article_header">
 								<h1 class="article_head"><%= @article.title %></h1>
 								<p>Written by: <%= link_to @article.user.name, user_path(@article.user) %></p>
-								<p><%= @article.created_at %></p>
-								<% if current_user.id == @article.user.id %>
-									<%= link_to "", @article , :method => :delete, :class =>"fa fa-trash-o", data: {confirm: "Are you sure you want to delete your article?"} %>
-								<% else %>
-									<p></p>
+								<p><%= @article.created_at.strftime("%A, %B %d, %Y") %></p>
+								<% if current_user != nil %>
+									<% if current_user.id == @article.user_id %>
+										<%= link_to "", @article , :method => :delete, :class =>"fa fa-trash-o", data: {confirm: "Are you sure you want to delete your article?"} %>
+									<% else %>
+										<p></p>
+									<% end %>
 								<% end %>
+
 							</div>
 						</div>
 
@@ -57,7 +60,7 @@
 												<div lass="small-10 columns commenter-date">
 										
 														<p id='commenter'>
-															<strong><%= comment.user.name %></strong><em><%= comment.created_at %></em> 
+															<strong><%= comment.user.name %></strong><em><%= comment.created_at.strftime("%A, %B %d, %Y") %></em> 
 															<% if current_user.id == comment.user.id || current_user.id == @article.user.id %>
 																<p><%= link_to "", [comment.article, comment], :method => :delete, :class =>"fa fa-trash-o" %></p>
 															<% else %>
