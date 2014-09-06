@@ -1,0 +1,97 @@
+/*handles the styles for the edit page*/
+
+.edit-bg-img {
+	background-image: url('http://wallpaperstock.net/winter-bokeh_wallpapers_35215_2560x1440.jpg');
+ background-repeat: no-repeat;
+
+
+
+ height: 100%;
+	width: 100%;
+ position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  display: block;
+
+  -webkit-filter: blur(3px);
+  -moz-filter: blur(3px);
+  -o-filter: blur(3px);
+  -ms-filter: blur(3px);
+  filter: blur(3px);
+}
+
+
+/*Handles styling for user show page*/
+
+.user-header {
+	margin-top: 50px;
+}
+
+.user-image {
+	max-height: 217px; 
+	max-width: 160px;
+	text-align: center;
+	/*border-radius: 100%;*/
+	/*height: 140px;
+	width: 170px;*/
+ /*border: 1px double #000;*/
+outline: 2px solid #699;
+outline-offset: -12px;
+
+}
+
+.user-name {
+	margin-top: 40px;
+	font-family: Muli;
+	font-size: 35px;
+}
+
+.user-description {
+	font-family: Muli;
+	font-size: 16px;
+	font-weight: 300;
+	color: gray;
+}
+
+
+/*styling for user articles*/
+
+.user-article-container {
+	margin-top: 80px;
+	margin-bottom: 150px;
+}
+
+
+.user-article-text {
+	max-height: 300px;
+	overflow: hidden;
+	margin-top: 15px;
+	font-family: Muli;
+	color: gray;
+}
+
+.user-article-title > a {
+	color: black;
+	font-family: Merriweather;
+	font-size: 30px;
+}
+
+.user-article-title > a:hover {
+	color: gray;
+}
+
+/*styling for contine reading button*/
+	.contine-reading-button {
+		margin-top: 15px;
+    background-color: black;
+    font-family: Muli;
+    border-radius: 10px;
+}
+
+.contine-reading-button:hover {
+    border: 2px solid black;
+    background-color: white;
+    color: black;
+
+}

@@ -1,0 +1,43 @@
+<div class="bg-img">
+
+</div>
+  <div class="content">
+    
+    <div class="large-2 small-2 small-centered columns app-logo-container-form">
+      <div class="app-logo-form">
+        <h1 class="text-center"><%= link_to "Jitter", root_path %></h1>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="large-8 large-centered columns">
+        <div class="form-containers">
+
+        <div class="form-header-container">
+          <div class= "large-12 columns form-header">
+            <h1 class="text-center">Log in</h1>
+          </div>
+        </div>
+
+          <div class="large-6 medium-centered columns">
+            <div class="site-forms">
+              <%= form_tag sessions_path do %>
+
+                <div class="field">
+                  <%= label_tag :email %><br/>
+                  <%= text_field_tag :email, params[:email], :class => "field-input", :placeholder =>"Email" %>
+                </div>
+                <div class="field">
+                  <%= label_tag :password %><br/>
+                  <%= password_field_tag :password %>
+                </div>
+                <div class="actions">
+                  <%= submit_tag "Log in", :class => 'button' %>
+                </div>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

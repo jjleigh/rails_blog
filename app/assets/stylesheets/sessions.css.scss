@@ -1,0 +1,197 @@
+.bg-img {
+	background-image: url('http://postdefiance.com/wp-content/uploads/2011/10/pen-and-paper.jpg');
+ background-repeat: no-repeat;
+ height: 100%;
+	width: 100%;
+ position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  display: block;
+
+  -webkit-filter: blur(3px);
+  -moz-filter: blur(3px);
+  -o-filter: blur(3px);
+  -ms-filter: blur(3px);
+  filter: blur(3px);
+}
+
+.content {
+
+  position: absolute;
+  background: transparent;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.app-logo-container-form {
+    background-color: black;
+    color: white;
+    width:250px;
+    height: 100px;
+    z-index: 9;
+    /*left: 40%;*/
+    position: relative;
+    z-index:700;
+    top: 70px;
+}
+.app-logo-form h1 {
+    
+    font-family: Merriweather;
+    color: white;
+    text-align: center;
+    padding-top: 20px;
+
+    a {
+       color: white; 
+    }
+
+
+}
+
+.form-containers {
+	 /*width: 300px;*/
+	 /*left: 300px;*/
+    margin: 100px auto 30px;
+    padding: 10px;
+    position: relative;
+ 
+    /* Font styles */
+    font-family: 'Raleway', 'Lato', Arial, sans-serif;
+    color: white;
+    text-shadow: 0 2px 1px rgba(0,0,0,0.3);
+}
+
+
+.form-header-container h1 {
+    padding-bottom: 20px;
+}
+
+
+
+/*Handles the styling of the input fields*/
+
+	.form-containers input{
+    /* Size and position */
+    width: 100%;
+    padding: 8px 4px 8px 10px;
+    margin-bottom: 15px;
+ 
+    /* Styles */
+    border: 1px solid #4e3043; /* Fallback */
+    border: 1px solid rgba(78,48,67, 0.8);
+    background: rgba(0,0,0,0.15);
+    border-radius: 2px;
+    box-shadow: 
+        0 1px 0 rgba(255,255,255,0.2), 
+        inset 0 1px 1px rgba(0,0,0,0.1);
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+ 
+    /* Font styles */
+    font-family: 'Raleway', 'Lato', Arial, sans-serif;
+    color: #fff;
+    font-size: 13px;
+}
+
+/*handles styling for the place holders*/
+
+.form-containers .field-input::-webkit-input-placeholder {
+    color: black;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.15);
+}
+ 
+.form-containers .field-input:-moz-placeholder {
+    color: black;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.15);
+}
+ 
+.form-containers .field-input:-ms-input-placeholder {
+    color: black;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.15);
+}
+
+
+/*focus and hover styles*/
+
+
+.form-containers input:hover {
+    border-color: white;
+}
+ 
+.form-containers input:focus {
+    box-shadow: 
+        0 1px 0 rgba(255,255,255,0.2), 
+        inset 0 1px 1px rgba(0,0,0,0.1),
+        0 0 0 3px rgba(255,255,255,0.15);
+    outline: none;
+    border: 1px solid #4e3043;
+    color: black;
+}
+ 
+/* Fallback */
+.no-boxshadow .form-containers input:focus {
+    outline: 1px solid white;
+}
+
+
+/*styling for the submit button*/
+
+
+.form-containers input[type=submit] {
+    /* Size and position */
+    width: 100%;
+    padding: 8px 5px;
+     
+    /* Styles */
+    background: linear-gradient(rgba(99,64,86,0.5), rgba(76,49,65,0.7));    
+    border-radius: 5px;
+    border: 1px solid #4e3043;
+    box-shadow: 
+        inset 0 1px rgba(255,255,255,0.4), 
+        0 2px 1px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+ 
+    /* Font styles */
+    color: white;
+    text-shadow: 0 1px 0 rgba(0,0,0,0.3);
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Raleway', 'Lato', Arial, sans-serif;
+}
+ 
+.form-containers input[type=submit]:hover {
+    box-shadow: 
+        inset 0 1px rgba(255,255,255,0.2), 
+        inset 0 20px 30px rgba(99,64,86,0.5);
+}
+ 
+/* Fallback */
+.no-boxshadow .form-containers input[type=submit]:hover {
+    background: #594642;
+}
+
+
+/*styling for the labels*/
+
+
+.form-containers label {
+    display: none; /* this hides the labels */
+    padding: 0 0 5px 2px;
+    cursor: pointer;
+}
+ 
+.form-containers label:hover ~ input {
+    border-color: #333;
+}
+ 
+.no-placeholder .form-containers label {
+    display: block;
+}

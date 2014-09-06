@@ -1,0 +1,9 @@
+== Blogging app
+
+Description:
+
+This is a rails based blogging platform
+
+Objective: 
+
+The learning objective is to practice Ruby on rails and styling with the foundation frame work for UX

@@ -1,0 +1,49 @@
+<div class="large-8 medium-centered columns ">
+		<div class="site forms">
+			
+			<%= form_for @user do |f|%>
+				
+			  <% if @user.errors.any? %>
+			    <div class="error_messages">
+			      <h2>Form is invalid</h2>
+			      <ul>
+			        <% for message in @user.errors.full_messages %>
+			          <li><%= message %></li>
+			        <% end %>
+			      </ul>
+			    </div>
+			  <% end %>
+				<div class="field">
+					<%= f.label :name, :class => "field-label" %><br>
+					<%= f.text_field :name, :class => "field-input", :placeholder =>"Name" %>
+				</div>
+
+				<div class="field">
+					<%= f.label :email, :class => "field-label" %><br>
+					<%= f.text_field :email, :class => "field-input", :placeholder =>"Email" %>
+				</div>
+
+				<div class="field">
+					<%= f.label :description, :class => "field-label" %><br>
+					<%= f.text_area :description, :class => "field-input", :placeholder =>"Description..." %>
+				</div>
+
+				<div class="field">
+					<%= f.label :picture, :class => "field-label" %><br>
+					<%= f.text_field :url, :class => "field-input", :placeholder =>"Url" %>
+				</div>
+
+				<div class="field">
+					<%= f.label :password, :class => "field-label" %><br>
+					<%= f.password_field :password, :class => "field-input",:placeholder =>"Password" %>
+				</div>
+				<div class="field">
+    			<%= f.label :password_confirmation, :class => "field-label" %><br/>
+    			<%= f.password_field :password_confirmation, :class => "field-input", :placeholder =>"Confirm password" %>
+  			</div>
+				<div class="field">
+					<%= f.submit "Save", :class => 'button' %>
+				</div>
+			<% end %>
+		</div>
+		</div>
