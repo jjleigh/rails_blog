@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_filter :ensure_logged_in, :only => [:edit, :update, :destroy, :show]
+  before_filter :ensure_logged_in, :only => [:edit, :update, :destroy]
   def new
     @user = User.new
   end
@@ -38,9 +38,9 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
 
-    if current_user
+    
       @my_articles = @user.articles
-    end
+    
   end
 
   private

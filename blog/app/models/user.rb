@@ -9,4 +9,5 @@ class User < ActiveRecord::Base
 	validates_presence_of :name, :email
 	validates :password, presence: true, length: { minimum: 6 }
   validates :password_confirmation, presence: true
+  mount_uploader :url, AvatarUploader
 end
