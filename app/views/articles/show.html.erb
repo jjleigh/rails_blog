@@ -61,17 +61,19 @@
 										
 														<p id='commenter'>
 															<strong><%= comment.user.name %></strong><em><%= comment.created_at.strftime("%A, %B %d, %Y") %></em> 
-															<% if current_user.id == comment.user.id || current_user.id == @article.user.id %>
-																<p><%= link_to "", [comment.article, comment], :method => :delete, :class =>"fa fa-trash-o" %></p>
+															<% if current_user %>
+																<% if current_user.id == comment.user.id || current_user.id == @article.user.id %>
+																	<p><%= link_to "", [comment.article, comment], :method => :delete, :class =>"fa fa-trash-o" %></p>
+																<% else %>
+																	<p></p>
+																<% end %>
 															<% else %>
 																<p></p>
 															<% end %>
+
 														</p>
 														
-											<!-- 	
-													<%# if current_user.id == comment.user.id %>
-														<p><%#= link_to "", [comment.article, comment], :method => :delete, :class =>"fa fa-trash-o" %></p>
-													<%# end %> -->
+
 												</div>
 
 												<% end %>
