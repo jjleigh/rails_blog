@@ -1,14 +1,14 @@
 /*handles the styles for the edit page*/
 
 .edit-bg-img {
-	background-image: url('http://wallpaperstock.net/winter-bokeh_wallpapers_35215_2560x1440.jpg');
+	background-image: image-url('jitter-bg-edit.jpg');
  background-repeat: no-repeat;
 
 
 
- height: 100%;
+ 	height: 100%;
 	width: 100%;
- position: fixed;
+ 	position: fixed;
   left: 0;
   right: 0;
   z-index: 1;
