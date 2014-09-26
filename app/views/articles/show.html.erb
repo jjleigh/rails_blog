@@ -47,93 +47,54 @@
 								</div>
 							</div>
 
-							<% @article.comments.each do |comment| %>
-								<div class="row comments-container">
+
+							<!-- partial containing the article comments iteration -->
+							<div id='comment-list'>
+							<%= render :partial => 'comments' %>
+							</div>
+
+							<%if current_user %>
+								<div class="row">
 									<div class="small-12 columns">
 
 										<div class="row">
-											<div class="small-12 columns comment-info">
-												<% if comment.user != nil %>
-												<div class="small-1 columns comment-image-container">
-													<%= image_tag comment.user.url, :class => "comment-image" %>
-												</div>
-												<div lass="small-10 columns commenter-date">
-										
-														<p id='commenter'>
-															<strong><%= comment.user.name %></strong><em><%= comment.created_at.strftime("%A, %B %d, %Y") %></em> 
-															<% if current_user %>
-																<% if current_user.id == comment.user.id || current_user.id == @article.user.id %>
-																	<p><%= link_to "", [comment.article, comment], :method => :delete, :class =>"fa fa-trash-o" %></p>
-																<% else %>
-																	<p></p>
-																<% end %>
-															<% else %>
-																<p></p>
-															<% end %>
-
-														</p>
-														
-
-												</div>
-
-												<% end %>
-											</div>	
-										</div>
-										<div class="row comment-text">
-											<div class="large-11 small-12 columns">
-												<p><%= comment.description %></p>
+											<div class="small-12 columns new-comment-header">
+												<h3>New Comment</h3>
 											</div>
 										</div>
-
-									
-									</div>
-								</div>
-
-
-							<% end %>
-
-				<%if current_user %>
-					<div class="row">
-						<div class="small-12 columns">
-
-							<div class="row">
-								<div class="small-12 columns new-comment-header">
-									<h3>New Comment</h3>
-								</div>
-							</div>
-							
-
-							<div class="row">
-								<div class="small-11 columns new-comment-input">
-									<%= form_for ([@article, @comment]) do |f| %>
-										<% if @comment.errors.any? %>
-											<div id="error_explanation">
-												<h2><%= pluralize(@comment.errors.count, "error") %> prohibited this review from being saved:</h2>
-
-					        			<ul>
-					        				<% @comment.errors.full_messages.each do |msg| %>
-					          				<li><%= msg %></li>
-					       					<% end %>
-					        			</ul>
-				      				</div>
-				    				<% end %>
-									<div class="comment-form-container">
 										
-							    	<div class="field">
-						      		<%= f.label :comment, :id => 'comment-label' %><br />
-						      		<%= f.text_area :description, :class=> "new-input" %>
-						    		</div>
-						    		<div class="actions">
-						      		<%= f.submit 'post', :class => 'button [tiny small large] save-button' %>
-						    		</div>
-									</div>
-				  				<% end %>
-				  			</div>
-			    		</div>
 
-						</div>
-			    </div>
-				<% end %>
+										<div class="row">
+											<div class="small-11 columns new-comment-input">
+												<%= form_for ([@article, @comment]), :remote => true do |f| %>
+													<% if @comment.errors.any? %>
+														<div id="error_explanation">
+															<h2><%= pluralize(@comment.errors.count, "error") %> prohibited this review from being saved:</h2>
+
+								        			<ul>
+								        				<% @comment.errors.full_messages.each do |msg| %>
+								          				<li><%= msg %></li>
+								       					<% end %>
+								        			</ul>
+							      				</div>
+							    				<% end %>
+												<div class="comment-form-container">
+													
+										    	<div class="field">
+									      		<%= f.label :comment, :id => 'comment-label' %><br />
+									      		<%= f.text_area :description, :class=> "new-input", :id => 'comment-box' %>
+									    		</div>
+									    		<div class="actions">
+									      		<%= f.submit 'post', :class => 'button [tiny small large] save-button' %>
+									    		</div>
+												</div>
+							  				<% end %>
+							  			</div>
+						    		</div>
+
+									</div>
+						    </div>
+							<% end %>
 
 
 					</div>
