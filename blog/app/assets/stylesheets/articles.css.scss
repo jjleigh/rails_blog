@@ -1,0 +1,430 @@
+.article-index-body {
+	background-image: image-url('jitter-home-bg.jpg');
+	height: 65%;
+    width: 100%;    
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:500;
+    overflow: hidden;
+}
+.app-logo-container {
+	background-color: black;
+	color: white;
+	width:250px;
+	height: 100px;
+	z-index: 9;
+	/*left: 40%;*/
+	position: relative;
+	z-index:700;
+	top: -60px;
+}
+.app-logo h1 {
+	
+	font-family: Merriweather;
+	color: white;
+	text-align: center;
+	padding-top: 20px;
+
+
+}
+
+.list {
+	list-style: none;
+	font-size: 17px;
+	position:relative;
+
+}
+
+.nav-links {
+
+	display: inline-block;
+	font-family: Muli;
+	padding-right: 18px;
+	padding-left: 18px;
+	transition: all .5s;
+	
+}
+
+.nav-links:hover a {
+	margin-bottom: 12px;
+}
+
+
+.nav-links:last-child {
+	border-right: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+
+/*handles the articles on the index page*/
+
+.index-articles {
+		width: 100%;
+    background:white;
+    top: 400px;
+    z-index:600;
+    position:relative;
+}
+
+.index-header {
+	margin-bottom: 50px;
+	margin-top: 88px;
+}
+
+.index-head, .article-head{
+	font-family: Merriweather;
+}
+
+.article-head {
+	font-family: Merriweather;
+	margin-top: 50px;
+}
+
+.article-text {
+	font-family:Muli;
+}
+
+.article-container {
+    margin-bottom: 100px;
+    /*background-color: gray;*/
+}
+/*applies to the double lines*/
+
+	.trial {
+		overflow: hidden;
+		text-align: center;
+	}
+
+	.trial span:before,
+	.trial span:after {
+/*		border-bottom: 1px solid black;
+		border-top: 1px solid black; this allows the double line effect */
+		border: 1px dashed black;
+    content: "";
+    display: inline-block;
+    /*height: 10px;  this allows the double line effect*/
+    position: relative;
+    vertical-align: middle;
+    width: 50%;
+	}
+	.trial span:before {
+    right: 0.5em;
+    margin-left: -50%;
+	}
+	.trial span:after {
+    left: 0.5em;
+    margin-right: -50%;
+	}
+	
+
+
+
+/*handles the article show page*/
+
+
+.entire-article {
+	margin-top: 150px;
+}
+
+.article_header {
+	padding-bottom: 50px;
+	font-family: Merriweather;
+}
+
+
+.article_head {
+	font-family: Merriweather;
+}
+
+.article-body {
+	font-family: Muli;
+}
+/*style for body when menu pops out*/
+body {
+    overflow-x: hidden
+}
+#wrapper {
+    position: relative;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+section {
+    /*position: absolute;*/
+    margin-bottom: 30px;
+    z-index: 9999;
+}
+
+/*section.toggle {
+    text-align: center
+}*/
+.mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 15;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+/*menu style*/
+nav.menu {
+    position: fixed;
+    z-index: 20;
+    background-color: black;
+    overflow: hidden;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+nav.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+nav.menu a {
+    font-weight: 300;
+    color: #fff;
+}
+.buttons {
+        width: 100%;
+        height: 50px;
+        /*text-align: center;*/
+    }
+    .nav-toggler {
+        margin-bottom: 0;
+    }
+
+    .buttons button {
+        background-color: transparent;
+        color: black;
+        font-size: 30px;
+    }
+
+    button.close-menu {
+        background-color: gray;
+        color: #fff;
+    }
+button.close-menu {
+    background-color: black;
+    color: #fff;
+}
+button.close-menu:focus {
+    outline: none
+}
+
+
+/*this handles the sliding left menu*/
+
+nav.slide-menu-left {
+    top: 0;
+    width: 215px;
+    height: 100%;
+}
+nav.slide-menu-left li {
+    display: block;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    /*margin-bottom: 20px;*/
+    /*border-bottom: solid 1px #3184a1;*/
+    border-top: solid 1px white;
+    font-family: Muli;
+}
+nav.slide-menu-left li:first-child {
+    border-top: none;
+    /*background-color: black;*/
+}
+nav.slide-menu-left #logo {
+   font-family: Merriweather;
+    font-size: 38px !important;
+
+
+}
+
+nav.slide-menu-left li:last-child {
+    border-bottom: none
+}
+nav.slide-menu-left a {
+    display: block;
+    padding: 10px;
+    font-size: 18px;
+}
+
+
+nav.slide-menu-left button.close-menu {
+    margin: 10px 0;
+    padding: 10px 30px;
+    font-size: 30px;
+    background-color: black;
+    color: #fff;
+}
+nav.slide-menu-left {
+    left: -300px
+}
+body.sml-open nav.slide-menu-left {
+    left: 0
+}
+
+/*handles the new article form*/
+
+.new-article-form {
+    margin-top: 100px;
+}
+
+
+.save-button {
+    background-color: black;
+    font-family: Muli;
+    border-radius: 10px;
+    font-size: 17px;
+}
+
+.save-button:hover {
+    border: 2px solid black;
+    background-color: white;
+    color: black;
+    font-size: 20px;
+
+}
+
+
+/*styling for place holders*/
+.article-site-forms {
+
+    ::-webkit-input-placeholder {
+       color: #210B02;
+       font-family: Muli;
+       font-size: 25px;
+       padding-bottom: 20px;
+    }
+
+
+  /*  ::-webkit-textarea-placeholder {
+       color: #210B02;
+       font-family: Muli;
+       font-size: 17px;
+       padding-bottom: 20px;
+    }
+*/
+    :-moz-placeholder { /* Firefox 18- */
+       color: #210B02;
+       font-family: Muli;
+       font-size: 20px;
+       padding-bottom: 20px;  
+    }
+
+    ::-moz-placeholder {  /* Firefox 19+ */
+       color: #210B02;
+       font-family: Muli;
+       font-size: 20px;
+       padding-bottom: 20px;  
+    }
+
+    :-ms-input-placeholder {  
+       color: #210B02; 
+       font-family: Muli; 
+       font-size: 35px;
+       padding-bottom: 20px;
+    }
+
+
+
+}
+
+/*Styling for labels*/
+
+.article-site-forms label {
+    display: none; /* this hides the labels */
+    padding: 0 0 5px 2px;
+    cursor: pointer;
+}
+ 
+.article-site-forms label:hover ~ input {
+    border-color: none;
+}
+ 
+.no-placeholder .article-site-forms label {
+    display: block;
+}
+/*styling for inputs*/
+
+.article-site-forms input,
+.article-site-forms textarea{
+    margin-bottom: 17px;
+    border: none;
+    font-family: Muli;
+    /*height: 40px;*/
+    -webkit-box-shadow: none; /* This removes the box shadow */
+    overflow: visible;
+}
+
+.article-site-forms input[type=text] {
+    font-size: 30px;
+    height: 50px;
+    size: 140px;
+}
+
+.article-site-forms textarea {
+    font-size: 17px;
+    height: 350px;
+    size: 700px;
+}
+
+.article-site-forms input:focus,
+.article-site-forms textarea:focus{
+    -webkit-box-shadow: none;
+    outline: none;
+    /*border: 1px solid black;*/
+    background-color: transparent;
+}
+
+/*style articles on the index page*/
+.index-article-container {
+   margin-top: 80px;
+    margin-bottom: 150px; 
+}
+
+.index-article-text {
+    max-height: 300px;
+    overflow: hidden;
+    margin-top: 15px;
+    font-family: Muli;
+    color: gray;
+}
+
+.index-article-title > a {
+    color: black;
+    font-family: Merriweather;
+    font-size: 35px;
+}
+
+.index-article-title > a:hover {
+    color: gray;
+}
+
+
+#commenter {
+    font-family: Muli;
+}
+
+
+
+
+
+
+
+
+

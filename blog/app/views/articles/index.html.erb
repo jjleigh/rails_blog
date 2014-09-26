@@ -1,0 +1,74 @@
+<div class="article-index-body">
+	
+      
+</div>
+
+
+
+		<!-- this is everything below the header image -->
+<div class="index-articles">
+
+<div class="row">
+	<!-- <div class=" large-8 small-8 small-centered large-centered colmuns"> -->
+		<div class="large-2 small-2 small-centered columns app-logo-container">
+			<div class="app-logo">
+				<h1 class="text-center">Jitter</h1>
+			</div>
+		</div>
+	<!-- </div> -->
+</div>
+
+	<div class="row">
+		<div class=" large-12 medium-12 small-12 small-centered columns">
+			<ul class="list trial">
+				<span>
+						<li class="nav-links"><%= link_to "About"%></li>
+					<% if current_user %>
+						<li class="nav-links"><%= link_to "Profile", user_path(current_user) %></li>
+						<li class="nav-links"><%= link_to "Log out", log_out_path %></li>
+					<% else %>
+						<li class="nav-links"><%= link_to "Login", new_session_path %></li>
+						<li class="nav-links"><%= link_to "Sign up", new_user_path %></li>
+					<% end %>
+				</span>
+			</ul>
+		</div>
+	</div>
+
+
+    <div class="row">
+    	<div class="large-12 small-centered columns index-header">
+    		
+				<h1 class="text-center index-head">Popular Articles</h1>
+    	</div>
+    </div>
+
+  
+        <div class="row index-article-container">
+          <div class="large-10 medium-10 small-12 small-centered columns">
+	          <% @articles.each do |article| %>
+	              <div class="row">
+	              	<div class="large-10 medium-5 small-11 small-centered columns">
+	              		<h3 class=" index-article-title"><%= link_to article.title, article_path(article) %></h3>
+	              	</div>
+	              </div>
+	              <div class="row">
+	              	<div class="large-10 medium-8 small-11 small-centered columns">
+	              		<p class="index-article-text"><%= article.text %></p>
+		              	<div class="row">
+	                  	<div class="large-5 medium-4 small-7 small-centered medium-uncentered large-uncentered columns">
+	                    
+	                    	<p class="contine-reading"><%= link_to "Contine reading", article_path(article), :class => "button [tiny small large] contine-reading-button" %></p>
+	                  	</div>
+	                	</div>
+	              	</div>
+
+	              </div>
+								<!-- <p><%#= link_to 'Edit', edit_article_path(article) %></p> -->
+							<hr>
+	          <% end %>
+
+          </div>
+        </div>
+</div>
+	</div>
