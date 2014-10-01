@@ -1,0 +1,44 @@
+<% @article.comments.each do |comment| %>
+	<div class="row comments-container">
+		<div class="small-12 columns">
+
+			<div class="row">
+				<div class="small-12 columns comment-info">
+					<% if comment.user != nil %>
+					<div class="small-1 columns comment-image-container">
+						<%= image_tag comment.user.url, :class => "comment-image" %>
+					</div>
+					<div lass="small-10 columns commenter-date">
+			
+							<p id='commenter'>
+								<strong><%= comment.user.name %></strong><em><%= comment.created_at.strftime("%A, %B %d, %Y") %></em> 
+								<% if current_user %>
+									<% if current_user.id == comment.user.id || current_user.id == @article.user.id %>
+										<p><%= link_to "", [comment.article, comment],:remote => true, :method => :delete, :class =>"fa fa-trash-o" %></p>
+									<% else %>
+										<p></p>
+									<% end %>
+								<% else %>
+									<p></p>
+								<% end %>
+
+							</p>
+							
+
+					</div>
+
+					<% end %>
+				</div>	
+			</div>
+			<div class="row comment-text">
+				<div class="large-11 small-12 columns">
+					<p><%= comment.description %></p>
+				</div>
+			</div>
+
+		
+		</div>
+	</div>
+
+
+<% end %>
