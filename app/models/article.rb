@@ -6,7 +6,7 @@ class Article < ActiveRecord::Base
 	has_many :users, :through => :comments
 
 	validates :title, presence: true
-	validates	:title, length: { minimum: 6 }
+	validates	:title, length: { minimum: 4 }
 	validates :text, presence: true
 	validates :text, length: { minimum: 300}
 end
