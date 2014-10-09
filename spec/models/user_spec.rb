@@ -27,5 +27,22 @@ describe User do
 	it "is invalid without a password_confirmation" do
 		expect(build(:user, password_confirmation: nil)).to_not be_valid
 	end
-	
+
+	# association tests
+
+	it 'should have many articles' do
+		expect(build(:user)).to respond_to(:articles)
+	end
+
+	it 'should have many comments' do
+		expect(build(:user)).to respond_to(:comments)
+	end	
+
 end
+
+
+
+
+
+
+
