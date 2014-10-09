@@ -1,4 +1,4 @@
- (function( window ){
+ $(document).on("ready page:load", function( window ){
 
   var body = document.body,
 
@@ -32,4 +32,4 @@
         } );
     });
 
-})( window );
+});

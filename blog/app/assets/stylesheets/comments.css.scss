@@ -1,9 +1,16 @@
-.comments-panel {
-	margin-top: 200px;
-	width: 58%;
-	background-color: silver;
-	margin-top: 80px;
+.comment-container {
+	background-color: green;
+	border-left: 1px solid gray !important;
+	border-right: 1px solid gray !important;
 }
+
+
+.comments-panel {
+	width: 58%;
+	margin-top: 80px;
+	
+}
+
 
 
 .comments-header {
@@ -34,7 +41,7 @@
 
 
 	.comment-info {
-		height: 105px;
+		height: 75px;
 		padding-top: 30px ;
 		padding-left: 30px ;
 		background-color: white;
@@ -59,6 +66,7 @@
 		margin-top: 20px;
 		padding-left: 85px ;
 		background-color: white;
+
 	}
 
 	.comment-image {
@@ -79,7 +87,7 @@
 .new-input {
 	height:100px;
 	size:260px;
-}
+
 
 /*styling for the label*/
 
