@@ -60,7 +60,7 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.0.0'
 end
 
-gem 'factory_girl'
+gem 'factory_girl_rails'
 gem 'faker'
 
 ruby "2.1.0"
