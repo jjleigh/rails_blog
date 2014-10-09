@@ -61,6 +61,7 @@ group :development, :test do
 end
 
 gem 'factory_girl'
+gem 'faker'
 
 ruby "2.1.0"
 

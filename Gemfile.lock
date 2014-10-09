@@ -53,6 +53,8 @@ GEM
     execjs (2.2.0)
     factory_girl (4.4.0)
       activesupport (>= 3.0.0)
+    faker (1.4.3)
+      i18n (~> 0.5)
     figaro (0.7.0)
       bundler (~> 1.0)
       rails (>= 3, < 5)
@@ -199,6 +201,7 @@ DEPENDENCIES
   carrierwave
   coffee-rails (~> 4.0.0)
   factory_girl
+  faker
   figaro
   fog
   foundation-rails
