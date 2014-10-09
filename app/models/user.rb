@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
 
 	has_many :articles, dependent: :destroy
 
-	validates_presence_of :name, :email
+	validates :name, :email, presence: true
 	validates :password, presence: true, length: { minimum: 6 }
   validates :password_confirmation, presence: true
   mount_uploader :url, AvatarUploader
